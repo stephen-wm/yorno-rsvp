@@ -1,0 +1,27 @@
+{
+  "recommendations": [
+    "mikestead.dotenv",
+    "editorconfig.editorconfig",
+    "dsznajder.es7-react-js-snippets",
+    "dbaeumer.vscode-eslint",
+    "davidanson.vscode-markdownlint",
+    "cardinal90.multi-cursor-case-preserve",
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "csstools.postcss",
+    "esbenp.prettier-vscode",
+    "yoavbls.pretty-ts-errors",
+    "bradlc.vscode-tailwindcss",
+    "infeng.vscode-react-typescript",
+    "redhat.vscode-yaml",
+    "formulahendry.auto-rename-tag",
+    "aaron-bond.better-comments",
+    "streetsidesoftware.code-spell-checker",
+    "usernamehw.errorlens",
+    "drizzle-team.drizzle-vscode",
+    "ms-playwright.playwright",
+    "vitest.explorer",
+    "eamodio.gitlens",
+    "mhutchie.git-graph",
+  ]
+}
