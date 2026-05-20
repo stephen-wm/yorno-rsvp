@@ -39,6 +39,6 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Initial project setup using Next.js (App Router) with TypeScript
 
-[Unreleased]: https://github.com/stephen-wm/yorno/compare/v0.1.1...HEAD
-[0.1.1]: https://github.com/stephen-wm/yorno/compare/v0.1.0...v0.1.1
-[0.1.0]: https://github.com/stephen-wm/yorno/releases/tag/v0.1.0
+[Unreleased]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.1.0...v0.1.1
+[0.1.0]: https://github.com/stephen-wm/yorno-rsvp/releases/tag/v0.1.0
