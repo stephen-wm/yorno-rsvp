@@ -1,26 +1,99 @@
 {
-  "name": "yorno-rsvp",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "next": "16.2.6",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.6",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+	"name": "yorno-rsvp",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Modern event management and RSVP platform for creating, sharing, and reserving events.",
+	"author": {
+		"name": "Stephen W.M. (https://github.com/stephen-wm",
+		"email": "hellostephenwm@gmail.com",
+		"url": "https://stephenwm.com"
+	},
+	"license": "AGPL-3.0-only",
+	"homepage": "https://yorno-rsvp.vercel.app",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/stephen-wm/yorno-rsvp.git"
+	},
+	"bugs": {
+		"url": "https://github.com/stephen-wm/yorno-rsvp/issues",
+		"email": "hellostephenwm@gmail.com"
+	},
+	"engines": {
+		"node": ">=20.20.2",
+		"npm": ">=10.0.0"
+	},
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "eslint --cache",
+		"lint:fix": "eslint --cache --fix",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"fix": "npm run lint:fix && npm run format",
+		"cspell": "cspell ** --dot --cache",
+		"typecheck": "tsc --noEmit",
+		"release": "release-it",
+		"release:dry": "release-it",
+		"plop": "plop",
+		"prepare": "husky",
+		"docs": "open-cli https://github.com/stephen-wm/yorno-rsvp/blog/main/README.md"
+	},
+	"dependencies": {
+		"class-variance-authority": "0.7.1",
+		"clsx": "2.1.1",
+		"dotenv": "17.4.2",
+		"lucide-react": "1.16.0",
+		"next": "16.2.6",
+		"next-themes": "0.4.6",
+		"radix-ui": "1.4.3",
+		"react": "19.2.4",
+		"react-dom": "19.2.4",
+		"shadcn": "4.7.0",
+		"tailwind-merge": "3.6.0",
+		"tw-animate-css": "1.4.0"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^21.0.1",
+		"@commitlint/config-conventional": "^21.0.1",
+		"@commitlint/format": "^21.0.1",
+		"@release-it/keep-a-changelog": "7.0.1",
+		"@tailwindcss/postcss": "^4",
+		"@tailwindcss/typography": "^0.5.19",
+		"@trivago/prettier-plugin-sort-imports": "^6.0.2",
+		"@types/node": "^20",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"cspell": "^9.8.0",
+		"eslint": "^9",
+		"eslint-config-next": "16.2.6",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-import-resolver-typescript": "^4.4.4",
+		"eslint-plugin-better-tailwindcss": "^4.5.0",
+		"eslint-plugin-check-file": "3.3.1",
+		"eslint-plugin-compat": "^7.0.2",
+		"eslint-plugin-import-x": "^4.16.2",
+		"eslint-plugin-no-secrets": "^2.3.3",
+		"eslint-plugin-perfectionist": "^5.9.0",
+		"eslint-plugin-promise": "^7.3.0",
+		"eslint-plugin-react-you-might-not-need-an-effect": "^0.10.1",
+		"eslint-plugin-regexp": "^3.1.0",
+		"eslint-plugin-security": "^4.0.0",
+		"eslint-plugin-sonarjs": "^4.0.3",
+		"eslint-plugin-unicorn": "^64.0.0",
+		"eslint-plugin-unused-imports": "^4.4.1",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.4.0",
+		"open-cli": "^9.0.0",
+		"plop": "^4.0.5",
+		"prettier": "^3.8.3",
+		"prettier-plugin-brace-style": "^0.10.1",
+		"prettier-plugin-classnames": "^0.10.1",
+		"prettier-plugin-merge": "^0.10.1",
+		"prettier-plugin-tailwindcss": "^0.8.0",
+		"release-it": "19.2.4",
+		"tailwindcss": "^4",
+		"tsx": "^4.22.3",
+		"typescript": "^5"
+	}
 }
