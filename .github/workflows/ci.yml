@@ -1,0 +1,38 @@
+name: CI
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches: [develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+
+      - name: Type check
+        run: npx tsc --noEmit
+
+      - name: Lint
+        run: npx eslint src/
+
+      - name: Format check
+        run: npx prettier --check src/
+
+      - name: Build
+        run: npx next build
+        env:
+          # Use dummy values for CI build — real secrets only on Vercel
+          DATABASE_URL: ${{ secrets.CI_DATABASE_URL }}
+          BETTER_AUTH_SECRET: ci-secret-not-real
+          NEXT_PUBLIC_APP_URL: http://localhost:3000
