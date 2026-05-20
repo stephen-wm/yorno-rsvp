@@ -1,0 +1,175 @@
+name: "🐛 Bug Report"
+description: Report a reproducible bug or unexpected behavior in Yorno.
+title: "bug: "
+labels:
+  - "bug"
+  - "needs-triage"
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to file a bug report. Please fill out every section as completely as possible. Issues that cannot be reproduced will be closed.
+
+        **Before submitting**, please:
+        - Search [existing issues](../issues?q=is%3Aissue+label%3Abug) to confirm this hasn't already been reported
+        - Confirm this is a bug in Yorno and not a configuration issue on your end
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight checklist
+      options:
+        - label: I searched existing issues and this has not been reported before
+          required: true
+        - label: I can reliably reproduce this issue with the steps I've provided below
+          required: true
+        - label: This is not a security vulnerability (if it is, see SECURITY.md)
+          required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severely does this bug affect your ability to use Yorno?
+      options:
+        - "Critical — the app is unusable or data is at risk"
+        - "High — a core feature is broken with no workaround"
+        - "Medium — a feature is broken but a workaround exists"
+        - "Low — minor issue, cosmetic, or edge case"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      description: Which part of the application is affected?
+      options:
+        - Authentication (login, registration, password reset)
+        - Onboarding
+        - Workspaces & Organizations
+        - Projects
+        - Issues & Kanban Board
+        - Roadmaps & Milestones
+        - Docs / Wiki
+        - Members & Roles (RBAC)
+        - Notifications
+        - Activity Feed
+        - Time Tracking
+        - Analytics
+        - File Attachments
+        - Billing & Subscriptions
+        - Account Settings
+        - Navigation & Layout
+        - API
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug description
+      description: A clear and concise description of what the bug is. What did you expect to happen? What actually happened?
+      placeholder: |
+        When I do X, I expect Y to happen. Instead, Z happens.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide exact, numbered steps starting from the login page. Vague steps ("it just broke") will result in the issue being closed.
+      placeholder: |
+        1. Log in to the application at /login
+        2. Navigate to [specific page]
+        3. Click on [specific element]
+        4. Observe that...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened? Include any error messages exactly as they appear.
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or screen recordings
+      description: |
+        For UI bugs, a screen recording is strongly preferred over screenshots.
+        Drag and drop images or videos here, or paste a link to a recording.
+      placeholder: Drag files here or paste a link...
+
+  - type: textarea
+    id: console_errors
+    attributes:
+      label: Browser console errors
+      description: |
+        Open DevTools (F12) → Console tab. Reproduce the bug. Paste any red error messages here.
+        If there are none, write "None".
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: network_errors
+    attributes:
+      label: Network errors
+      description: |
+        Open DevTools (F12) → Network tab. Reproduce the bug. Note any failed requests (shown in red).
+        Include the request URL, HTTP status code, and response body if available.
+        If there are none, write "None".
+      placeholder: |
+        POST /api/auth/sign-in — 429 Too Many Requests
+        Response: { "error": "Rate limit exceeded" }
+
+  - type: dropdown
+    id: account_tier
+    attributes:
+      label: Account plan
+      options:
+        - Free (individual)
+        - Pro (individual)
+        - Organization
+        - Enterprise
+        - "Not applicable / don't know"
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: "e.g. Chrome 124.0.6367.82, Safari 17.4, Firefox 125"
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "e.g. macOS 14.4, Windows 11, Ubuntu 22.04"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Anything else that might help — related issues, recent changes to your account, whether the bug is intermittent or consistent, etc.

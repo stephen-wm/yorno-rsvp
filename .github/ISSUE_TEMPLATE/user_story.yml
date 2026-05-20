@@ -1,0 +1,204 @@
+name: "📖 User Story"
+description: Define a new feature or enhancement from the user's perspective for Yorno.
+title: "story: "
+labels:
+  - "user-story"
+  - "needs-refinement"
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to propose a new feature or enhancement for Yorno. A good user story focuses on the **value** delivered to the user, not the technical implementation.
+
+        **Before submitting**, please:
+        - Search [existing stories](../issues?q=is%3Aissue+label%3Auser-story) to confirm this feature hasn't already been proposed
+        - Ensure this aligns with Yorno's product vision and current priorities
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight checklist
+      options:
+        - label: I searched existing stories and this feature has not been proposed
+          required: true
+        - label: I've described the "what" and "why" (technical implementation details belong in the PR)
+          required: true
+        - label: I understand that stories may be re-prioritized or broken into smaller pieces during refinement
+          required: true
+
+  - type: textarea
+    id: story
+    attributes:
+      label: User Story
+      description: |
+        Write the story using the standard format. Keep it focused; if you're describing multiple behaviors, consider splitting into separate stories.
+
+        **Format:** As a `<type of user>`, I want `<goal>` so that `<reason>`.
+      placeholder: |
+        As an event host,
+        I want to see a dashboard of RSVP responses (Yes / No / Maybe / Pending)
+        so that I can quickly gauge attendance and plan accordingly.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: user_persona
+    attributes:
+      label: User Persona
+      description: Which type of user does this story primarily benefit?
+      options:
+        - "Event Host (creating and managing their own events)"
+        - "Co-Host / Organizer (helping manage someone else's event)"
+        - "Event Staff (handling check-ins and day-of operations)"
+        - "Invited Guest (receiving invitations and RSVPing)"
+        - "Waitlisted Guest (on the waitlist for a full event)"
+        - "Guest with Plus-Ones (managing companions)"
+        - "Unauthenticated User (pubic event page visitors)"
+        - "All Users"
+        - "Other (describe in context)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected Area
+      description: Which part of Yorno does this story touch?
+      options:
+        - Event Creation & Editing
+        - Event Publishing & Visibility
+        - Invitation Management (sending, tracking)
+        - RSVP Flow ( Yes / No / Maybe / Waitlist)
+        - Guest & Plus-One Management
+        - Check-In & Day-of Operations
+        - Event Roles (Host, Co-Host, Organizer, Staff)
+        - Announcements & Guest Communication
+        - Tags & Categorization
+        - Event Dashboard & Analytics
+        - Public Event Pages
+        - Onboarding
+        - Email Notifications
+        - Application Notifications
+        - Activity Feed
+        - Analytics
+        - File Attachments
+        - Billing & Subscriptions
+        - Account & Profile
+        - Authentication (login, registration, password reset)
+        - Navigation & Layout
+        - API
+        - Users & Roles (RBAC)
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Business Priority
+      description: |
+        How important is this feature relative to other work?
+        (Final priority will be set during refinement.)
+      options:
+        - "Critical (blocking other work or a key customer commitment)"
+        - "High (delivers significant user value)"
+        - "Medium (important but can be deferred if needed)"
+        - "Low (nice to have, low urgency)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Detailed Description
+      description: |
+        Provide additional context that helps the team understand the problem space.
+
+        Include:
+        - What problem does this solve? What is thew user trying to accomplish?
+        - What is the current user experience (if any)?
+        - Are there any designs, mockups, or references to link to?
+        - Edge cases or constraints to consider (e.g., "What happens when an event has 500 invitees?")
+      placeholder: |
+        Currently, hosts have to manually count RSVP responses from the invitation list. For events with many invitees, this is time-consuming and error-prone. A dashboard would give them at-a-glance counts of Yes / No / Maybe / Pending / Waitlisted responses.
+
+        This is especially important for events with limited capacity, where the host needs to track how many spots remain and whether the waitlist is growing.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: |
+        Define the conditions that must be met for this story to be considered complete.
+
+        Use the **Given / When / Then** format for clarity. Each criterion should be independently testable.
+      placeholder: |
+        **Scenario 1: Dashboard shows accurate RSVP counts**
+        Given I am a host viewing my event dashboard
+        And the event has 10 Yes, 5 No, 3 Maybe, 2 Pending, and 1 Waitlisted responses
+        When the dashboard loads
+        Then I see those counts displayed in a summary card or chart
+
+        **Scenario 2: Empty state**
+        Given I am a host viewing an event with zero invitations sent
+        When I view the dashboard
+        Then I see an empty state message: "No invitations sent yet"
+
+        **Scenario 3: Waitlist count updates**
+        Given I have an event at capacity with waitlisting enabled
+        When a guest RSVPs and gets waitlisted
+        Then the waitlist count increments within the dashboard
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical_notes
+    attributes:
+      label: Technical Notes (optional)
+      description: |
+        Any implementation hints, dependencies, or constraints the developer should know.
+        This section is **not required** (it will be expanded during refinement).
+
+        Examples:
+        - "The RSVP counts can be derived from the `Invitation.status` field (no new query needed)"
+        - "Depends on the event dashboard page being built first (see story #XXX)"
+        - "Consider polling or WebSocket for real-time updates during high-traffic RSVP windows"
+      placeholder: Leave blank if you're unsure; this is for the engineer and PM to discuss during refinement.
+
+  - type: dropdown
+    id: size_estimate
+    attributes:
+      label: Size Estimate (T-Shirt)
+      description: Rough effort estimate. This will be refined by the team during planning.
+      options:
+        - "XS — hours, not days"
+        - "S — ~1-2 days"
+        - "M — ~3-5 days"
+        - "L — ~1-2 weeks"
+        - "XL — needs to be broken down"
+        - "Unknown — needs discussion"
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments & References
+      description: |
+        Drag and drop supporting materials here:
+        - Figma designs or mockups
+        - Screenshots of competitor implementations (Eventbrite, Luma, Partiful, etc.)
+        - Links to related issues or discussions
+      placeholder: Drag files here or paste links
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: |
+        Anything else that helps understand this feature:
+        - How many users are affected or requesting this?
+        - What is the impact of *not* doing this?
+        - Are there time-sensitive reasons (e.g., customer event deadline, seasonal spike)?

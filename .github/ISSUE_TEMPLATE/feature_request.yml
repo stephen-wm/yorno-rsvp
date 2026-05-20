@@ -1,0 +1,129 @@
+name: "✨ Feature Request"
+description: Propose a new feature or enhancement for Yorno.
+title: "feat: "
+labels:
+  - "enhancement"
+  - "needs-triage"
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to propose a feature. Well-written feature requests get prioritized faster because they make it easy to understand the problem and evaluate solutions.
+
+        **Before submitting**, please:
+        - Search [existing issues](../issues?q=is%3Aissue+label%3Aenhancement) to confirm this hasn't already been requested
+        - If an issue exists, add a 👍 reaction rather than filing a duplicate
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight checklist
+      options:
+        - label: I searched existing issues and this has not been requested before
+          required: true
+        - label: This request is for Yorno itself, not a third-party integration or external tooling
+          required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Feature area
+      description: Which part of the product does this feature belong to?
+      options:
+        - Authentication & Accounts
+        - Onboarding
+        - Workspaces & Organizations
+        - Projects
+        - Issues & Kanban Board
+        - Roadmaps & Milestones
+        - Docs / Wiki
+        - Members & Roles (RBAC)
+        - Notifications
+        - Activity Feed
+        - Time Tracking
+        - Analytics & Reporting
+        - File Attachments
+        - Billing & Subscriptions
+        - Account Settings
+        - Navigation & Layout
+        - API & Integrations
+        - Developer Experience (DX)
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tier
+    attributes:
+      label: Who would benefit from this feature?
+      options:
+        - All users (Free, Pro, Organization)
+        - Pro users and above
+        - Organization tier only
+        - Enterprise only
+        - Admins and Owners only
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: |
+        What problem are you trying to solve? Describe it clearly and frame it as a user need, not a technical solution.
+        The best problem statements start with: "As a [type of user], I want to [do something] so that [I can achieve a goal]."
+      placeholder: |
+        As an organization admin, I want to see a breakdown of which team members have the most open issues assigned to them so that I can redistribute workload before deadlines slip.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: |
+        Describe the feature you'd like to see. Be as specific as possible.
+        If you have ideas about the UI or UX, describe them here. Screenshots, wireframes, or links to similar features in other tools are very helpful.
+      placeholder: |
+        A workload view in the Analytics section that shows each member's name, their assigned issue count, and a color-coded indicator (green/yellow/red) based on their capacity. Clicking a member would filter the issue list to show only their assigned issues.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What other approaches did you think about? Why do you prefer your proposed solution over them?
+      placeholder: |
+        I considered filtering the issue list by assignee manually, but that requires knowing who to check and doesn't give an at-a-glance overview of the whole team.
+    validations:
+      required: true
+
+  - type: textarea
+    id: prior_art
+    attributes:
+      label: Examples from other tools
+      description: Does a similar feature exist in Linear, Jira, Notion, Asana, or another product? Link to it or describe it. This helps clarify scope quickly.
+      placeholder: |
+        Linear has a "My Issues" view but nothing team-wide. Jira has a similar workload view under Reports → User Workload (link: ...).
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this to you?
+      options:
+        - "Critical — I cannot use Yorno effectively without this"
+        - "High — this would significantly improve my workflow"
+        - "Medium — useful but I have a workable alternative today"
+        - "Low — nice to have, low urgency"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Anything else — related issues, relevant constraints, edge cases to consider, or context about your team size or workflow that might affect the design.
