@@ -1,0 +1,68 @@
+{
+	"version": "0.2",
+	"noConfigSearch": true,
+	"languageSettings": [
+		{
+			"languageId": "*",
+			"locale": "en, en-US",
+			"allowCompoundWords": true
+		},
+		{
+			"languageId": "typescript",
+			"allowCompoundWords": true
+		}
+	],
+	"ignorePaths": [
+		"node_modules",
+		"dist",
+		"drizzle",
+		".env",
+		".tests",
+		".prettierignore",
+		".gitignore",
+		"LICENSE",
+		".next",
+		".vercel",
+		"package.json",
+		".prettierrc",
+		".git",
+		".husky",
+		".vscode",
+		".github/workflows",
+		".env*"
+	],
+	"dictionaryDefinitions": [
+		{
+			"name": "project-dependencies",
+			"path": "./.cspell/dependencies.txt",
+			"addWords": true
+		},
+		{ "name": "misc-terms", "path": "./.cspell/misc.txt", "addWords": true }
+	],
+	"dictionaries": [
+		"git",
+		"filetypes",
+		"npm",
+		"typescript",
+		"json",
+		"css",
+		"html",
+		"markdown",
+		"node",
+		"lorem-ipsum",
+		"softwareTerms",
+		"misc",
+		"project-dependencies",
+		"misc-terms"
+	],
+	"words": ["yorno"],
+	"ignoreWords": [],
+	"patterns": [
+		{
+			"name": "hexColor",
+			"pattern": "(?:#)?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6}"
+		}
+	],
+	"ignoreRegExpList": ["/\\b[a-z]+rc\\b/"],
+	"import": []
+}
