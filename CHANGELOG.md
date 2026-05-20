@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-05-20
+
+### Fixed
+
+- All tag links in this CHANGELOG file
+
 ## [0.1.1] - 2026-05-20
 
 ### Added
