@@ -1,0 +1,18 @@
+# Ignore local dev URLs
+exclude = [
+	"http://localhost:3000",
+	"http://localhost:3001",
+	"http://localhost",
+	"https://localhost",
+	"https://localhost:*",
+	"http://127.0.0.1",
+  "https://127.0.0.1",
+]
+
+# Retry a couple of times for flaky servers
+max_retries = 2
+timeout = 15
+max_redirects = 5
+
+# Treat missing anchors as warnings, not errors
+accept = ["200..=299", "429"]
