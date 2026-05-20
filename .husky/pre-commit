@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+#. "$(dirname -- "$0")/_/husky.sh"
+
+# 1. Run lint-staged and prettier
+npx lint-staged
