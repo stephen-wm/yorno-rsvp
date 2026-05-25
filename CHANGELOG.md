@@ -6,6 +6,37 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+### Added
+
+- Sentry edge and server configuration, with client and server instrumentation
+- Prisma ORM configuration and initial events schema definitions in `prisma/schema.prisma`
+- Edge and standard logger with Pino
+- PostHog provider for analytics
+- Initial Arcjet configuration through Next.js proxy
+- Toaster provider with Sonner
+- Global error component with Sentry capture configuration
+- `slugify` and `formatDate` functions in `src/lib/utils.ts`
+- Empty `types`, `stores`, and `features` folders in the `src` directory
+- Empty `api` folder in `src/app/` directory
+- Initial authenticated and unauthenticated route groups in the `src/app/` directory (`(app)`, `(public)`, and `(auth)`)
+- Health check endpoint for uptime monitoring and orchestration
+- Neon-PostgreSQL skills in `.agents` directory
+- shadcn/ui skeleton component for use with current theme toggler component implementation
+
+### Changed
+
+- Renamed `app/(marketing)` folder to `app/(public)`
+- Moved initial marketing pages header to own component file in the layouts components folder
+- Reorganized `.env.example`
+- Moved `CODEOWNERS` from project root to `.github/` folder
+- Imported and enabled Toaster provider in `src/providers/index.tsx`
+- Added `healthz` to `misc` dictionary in the `.cspell` directory
+- Ignored Prisma generated folder in ESLint configuration file
+- Ignored `src/generated/prisma` folder in `.gitignore`
+- Enabled Prettier editting of Prisma files in `.vscode/settings.json`
+- Reduced column wrapping size and rulers position from 100 to 80 in `.vscode/settings.json`
+- Add Prisma generated and migrations folder to CSpell configuration ignore paths list
+
 ## [0.1.3] - 2026-05-20
 
 ### Changed
