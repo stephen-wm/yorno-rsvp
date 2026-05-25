@@ -1,8 +1,23 @@
 {
   "servers": {
     "Sentry": {
-      "url": "https://mcp.sentry.dev/mcp/Yorno",
+      "url": "https://mcp.sentry.dev/mcp/nestwork-xyz/yorno-rsvp",
       "type": "http"
+    },
+    "arcjet": {
+      "url": "https://api.arcjet.com/mcp",
+      "type": "http"
+    },
+    "Neon": {
+      "type": "http",
+      "url": "https://mcp.neon.tech/mcp",
+      "headers": {
+        "Authorization": "Bearer napi_qprey5a18n2qgtdw0m3w0viyr64l1evm8gya7nhd78ucbao503s0ds8gnmiu7pnt"
+      }
+    },
+    "posthog": {
+      "type": "http",
+      "url": "https://mcp.posthog.com/mcp?features=dashboards,insights,product_analytics,experiments,surveys,annotations,replay,sql,error_tracking,logs,flags,early_access_features,cohorts,events,persons,actions,data_warehouse,endpoints,data_schema,hog_functions,hog_function_templates,workflows,workspace,docs,notebooks,alerts,platform_features,integrations,conversations,core,search,reverse_proxy,debug"
     }
   }
 }
