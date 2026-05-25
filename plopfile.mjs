@@ -33,7 +33,8 @@ export default function (plop) {
 					return `Enter subpath inside the ${nameMap[answers.baseDir] || 'base'} (e.g. components/ui):`;
 				},
 				default: '',
-				validate: (v) => (v.includes('..') ? 'Subpath must not contain ".."' : true),
+				validate: (v) =>
+					v.includes('..') ? 'Subpath must not contain ".."' : true,
 				filter: (v) =>
 					String(v || '')
 						.replaceAll('\\', '/')
@@ -46,7 +47,11 @@ export default function (plop) {
 				.replaceAll('\\', '/')
 				.replace(/(^\/+|\/+$)/g, '')
 				.replace(/\.\.(\/|$)/g, '');
-			const targetPath = path.posix.join(answers.baseDir, sub, answers.fileName);
+			const targetPath = path.posix.join(
+				answers.baseDir,
+				sub,
+				answers.fileName,
+			);
 
 			return [
 				{

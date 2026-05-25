@@ -13,11 +13,13 @@ const Configuration = {
 
 	formatter: '@commitlint/format',
 
-	helpUrl: 'https://github.com/conventional-changelog/commitlint/#what-is-commitlint',
+	helpUrl:
+		'https://github.com/conventional-changelog/commitlint/#what-is-commitlint',
 
 	// Custom ignore patterns
 	ignores: [
-		(commit) => commit.startsWith('chore(deps)') || commit.includes('dependabot'),
+		(commit) =>
+			commit.startsWith('chore(deps)') || commit.includes('dependabot'),
 		(commit) => commit.startsWith('wip:'),
 		(commit) => commit.includes('[skip ci]'),
 	],
@@ -80,7 +82,11 @@ const Configuration = {
 		'scope-case': [2, 'always', 'lower-case'],
 
 		// Subject rules
-		'subject-case': [2, 'never', ['sentence-case', 'start-case', 'pascal-case', 'upper-case']],
+		'subject-case': [
+			2,
+			'never',
+			['sentence-case', 'start-case', 'pascal-case', 'upper-case'],
+		],
 		'subject-empty': [2, 'never'],
 		'subject-full-stop': [2, 'never', '.'],
 
