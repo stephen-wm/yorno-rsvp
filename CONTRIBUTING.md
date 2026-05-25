@@ -475,7 +475,10 @@ export async function createIssue(input: unknown) {
 	const data = createIssueSchema.parse(input);
 
 	// 3. Authorize
-	await checkMembership(session.user.id, data.organizationId, ['admin', 'member']);
+	await checkMembership(session.user.id, data.organizationId, [
+		'admin',
+		'member',
+	]);
 
 	// 4. Execute
 	return await db.insert(issues).values(data).returning();
