@@ -4,7 +4,7 @@ const defineConfig = {
 	endOfLine: 'lf',
 	requirePragma: false,
 	insertPragma: false,
-	printWidth: 100,
+	printWidth: 80,
 	useTabs: true,
 	tabWidth: 2,
 	semi: true,
