@@ -1,0 +1,156 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum RSVPStatus {
+  PENDING
+  YES
+  NO
+  MAYBE
+  WAITLISTED
+}
+
+enum EventRoleType {
+  HOST
+  CO_HOST
+  ORGANIZER
+  STAFF
+}
+
+enum EventStatus {
+  DRAFT
+  PUBLISHED
+  CANCELLED
+  COMPLETED
+}
+
+model Event {
+  id            String              @id @default(cuid())
+  slug          String              @unique
+  title         String
+  description   String?
+  location      String?
+  timezone      String?
+  startsAt      DateTime            @map("starts_at")
+  endsAt        DateTime?           @map("ends_at")
+  hostID        String              @map("host_id")
+  capacity      Int?
+  isPublic      Boolean             @default(false) @map("is_public")
+  status        EventStatus         @default(DRAFT)
+  createdAt     DateTime            @default(now()) @map("created_at")
+  updatedAt     DateTime            @updatedAt @map("updated_at")
+  invitations   Invitation[]
+  eventRoles    EventRole[]
+  announcements EventAnnouncement[]
+  eventTags     EventTag[]
+
+  @@index([hostID])
+}
+
+model Invitation {
+  id             String        @id @default(cuid())
+  eventID        String        @map("event_id")
+  event          Event         @relation(fields: [eventID], references: [id], onDelete: Cascade)
+  userID         String?       @map("user_id")
+  email          String?
+  invitedBy      String?       @map("invited_by") // userID of sender
+  token          String?       @unique
+  tokenExpiresAt DateTime?     @map("token_expires_at")
+  status         RSVPStatus    @default(PENDING)
+  guestCount     Int           @default(0) @map("guest_count")
+  maxGuests      Int           @default(0) @map("max_guests")
+  respondedAt    DateTime?     @map("responded_at")
+  waitlistedAt   DateTime?     @map("waitlisted_at")
+  createdAt      DateTime      @default(now()) @map("created_at")
+  updatedAt      DateTime      @updatedAt @map("updated_at")
+  guests         Guest[]
+  rsvpHistory    RSVPHistory[]
+  checkIn        CheckIn?
+
+  @@unique([eventID, email])
+  @@unique([eventID, userID])
+  @@index([eventID])
+  @@index([eventID, status])
+}
+
+model Guest {
+  id           String     @id @default(cuid())
+  invitationID String     @map("invitation_id")
+  invitation   Invitation @relation(fields: [invitationID], references: [id], onDelete: Cascade)
+  name         String
+  email        String?
+  createdAt    DateTime   @default(now()) @map("created_at")
+
+  @@index([invitationID])
+}
+
+model CheckIn {
+  id           String     @id @default(cuid())
+  invitationID String     @unique @map("invitation_id")
+  invitation   Invitation @relation(fields: [invitationID], references: [id], onDelete: Cascade)
+  checkedInAt  DateTime   @default(now()) @map("checked_in_at")
+  checkedInBy  String?    @map("checked_in_by") // userID of staff
+
+  @@index([invitationID])
+}
+
+model EventRole {
+  id        String        @id @default(cuid())
+  eventID   String        @map("event_id")
+  userID    String        @map("user_id")
+  role      EventRoleType
+  event     Event         @relation(fields: [eventID], references: [id], onDelete: Cascade)
+  createdAt DateTime      @default(now()) @map("created_at")
+
+  @@unique([eventID, userID])
+  @@index([userID])
+}
+
+model RSVPHistory {
+  id           String     @id @default(cuid())
+  invitationID String     @map("invitation_id")
+  oldStatus    RSVPStatus @map("old_status")
+  newStatus    RSVPStatus @map("new_status")
+  changedBy    String?    @map("changed_by") // userID - null if self-changed
+  changedAt    DateTime   @default(now()) @map("changed_at")
+  invitation   Invitation @relation(fields: [invitationID], references: [id], onDelete: Cascade)
+
+  @@index([invitationID])
+}
+
+model EventAnnouncement {
+  id        String   @id @default(cuid())
+  eventID   String   @map("event_id")
+  event     Event    @relation(fields: [eventID], references: [id], onDelete: Cascade)
+  authorID  String   @map("author_id") // userID from DB
+  title     String
+  body      String
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([eventID])
+}
+
+model Tag {
+  id        String     @id @default(cuid())
+  name      String     @unique
+  eventTags EventTag[]
+}
+
+model EventTag {
+  eventID String @map("event_id")
+  tagID   String @map("tag_id")
+  event   Event  @relation(fields: [eventID], references: [id], onDelete: Cascade)
+  tag     Tag    @relation(fields: [tagID], references: [id], onDelete: Cascade)
+
+  @@id([eventID, tagID])
+}
