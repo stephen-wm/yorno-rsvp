@@ -2,20 +2,16 @@
 
 import { type ReactNode } from 'react';
 
-import { Moon, Sun } from 'lucide-react';
+import { Header } from '@/components/layout/header';
 
-import { useTheme } from 'next-themes';
-
-import { useIsMounted } from '@/hooks/use-is-mounted';
-
-export default function MarketingLayout({ children }: Readonly<{ children: ReactNode }>) {
-	const { resolvedTheme, setTheme } = useTheme();
-	const isMounted = useIsMounted();
-	const isDark = resolvedTheme === 'dark';
-
+export default function MarketingLayout({
+	children,
+}: Readonly<{ children: ReactNode }>) {
 	return (
 		<div className="flex flex-1 flex-col">
-			<header
+			<Header className="fixed inset-x-0 top-0" />
+
+			{/* <header
 				className="fixed inset-x-0 top-0 flex h-18 w-full max-w-full items-center justify-center
 					bg-transparent"
 			>
@@ -34,7 +30,7 @@ export default function MarketingLayout({ children }: Readonly<{ children: React
 						</button>
 					)}
 				</div>
-			</header>
+			</header> */}
 
 			{children}
 		</div>
