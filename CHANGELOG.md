@@ -39,6 +39,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Added `postinstall` script to automatically run Prisma client generation after dependency installation
 - Simplified CI workflows by removing explicit Prisma generate steps
 - Added cache option in Node setup step for `build` workflow
+- Added Prisma skip generate environment variable in `commitlint` workflow
+- Reorganized order of steps to have environment secrets set prior to dependency installation in `build` workflow
 
 ## [0.1.3] - 2026-05-20
 
