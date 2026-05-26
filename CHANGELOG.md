@@ -36,10 +36,9 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Enabled Prettier editting of Prisma files in `.vscode/settings.json`
 - Reduced column wrapping size and rulers position from 100 to 80 in `.vscode/settings.json`
 - Add Prisma generated and migrations folder to CSpell configuration ignore paths list
-- Modified `build` workflow:
-  - Runs Prisma generate step (ensures Prisma client is available)
-  - Added cache option to in Node setup step
-- Added step to generate Prisma client in `ci` and `lint-and-format` workflows
+- Added `postinstall` script to automatically run Prisma client generation after dependency installation
+- Simplified CI workflows by removing explicit Prisma generate steps
+- Added cache option in Node setup step for `build` workflow
 
 ## [0.1.3] - 2026-05-20
 
