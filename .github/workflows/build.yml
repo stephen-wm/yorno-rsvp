@@ -37,6 +37,7 @@ jobs:
             echo "RESEND_API_KEY=fake_api_key" >> $GITHUB_ENV
           else
             echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> $GITHUB_ENV
+            echo "DIRECT_URL=${{ secrets.DIRECT_URL }}" >> $GITHUB_ENV
             echo "BETTER_AUTH_SECRET=${{ secrets.BETTER_AUTH_SECRET }}" >> $GITHUB_ENV
             echo "RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" >> $GITHUB_ENV
           fi
