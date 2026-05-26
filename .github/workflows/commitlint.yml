@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     env:
-      PRISMA_SKIP_POSTINSTALL_GENERATE: true
+      SKIP_PRISMA_GENERATE: true
 
     steps:
       - name: Checkout repository
