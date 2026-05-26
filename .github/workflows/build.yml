@@ -23,6 +23,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: "20"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm install
@@ -39,8 +40,11 @@ jobs:
             echo "RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" >> $GITHUB_ENV
           fi
 
-      - name: Build project
-        run: npm run build
+      - name: Generate Prisma client
+        run: npm run db:generate
 
       - name: Lint code
         run: npm run lint
+
+      - name: Build project
+        run: npm run build
