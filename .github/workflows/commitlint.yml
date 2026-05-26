@@ -9,9 +9,6 @@ jobs:
   commitlint:
     runs-on: ubuntu-22.04
 
-    env:
-      SKIP_PRISMA_GENERATE: true
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
