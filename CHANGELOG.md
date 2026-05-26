@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-05-26
+
 ### Added
 
 - Sentry edge and server configuration, with client and server instrumentation
@@ -39,8 +41,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Added `postinstall` script to automatically run Prisma client generation after dependency installation
 - Simplified CI workflows by removing explicit Prisma generate steps
 - Added cache option in Node setup step for `build` workflow
-- Added Prisma skip generate environment variable in `commitlint` workflow
 - Reorganized order of steps to have environment secrets set prior to dependency installation in `build` workflow
+- Removed `postinstall` script in `package.json` and added explicit Prisma generate step in relevant workflows
 
 ## [0.1.3] - 2026-05-20
 
@@ -87,7 +89,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Initial project setup using Next.js (App Router) with TypeScript
 
-[Unreleased]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.1.3...HEAD
+[Unreleased]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.1.2...v0.2.0
 [0.1.3]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.1.0...v0.1.1
