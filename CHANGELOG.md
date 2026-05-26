@@ -39,7 +39,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Modified `build` workflow:
   - Runs Prisma generate step (ensures Prisma client is available)
   - Added cache option to in Node setup step
-- Added step to generate Prisma client in `ci` workflow
+- Added step to generate Prisma client in `ci` and `lint-and-format` workflows
 
 ## [0.1.3] - 2026-05-20
 
