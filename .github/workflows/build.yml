@@ -32,6 +32,7 @@ jobs:
         run: |
           if [ "${GITHUB_ACTOR}" = "dependabot[bot]" ]; then
             echo "DATABASE_URL=postgres://fake_user:fake_pass@localhost:5432/fakedb?pgbouncer=false" >> $GITHUB_ENV
+            echo "DIRECT_URL=postgres://fake_user:fake_pass@localhost:5432/fakedb?pgbouncer-false" >> $GITHUB_ENV
             echo "BETTER_AUTH_SECRET=fake_better_auth_secret" >> $GITHUB_ENV
             echo "RESEND_API_KEY=fake_api_key" >> $GITHUB_ENV
           else
