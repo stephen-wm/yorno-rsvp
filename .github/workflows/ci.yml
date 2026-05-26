@@ -20,6 +20,9 @@ jobs:
           cache: npm
       - run: npm ci
 
+      - name: Generate Prisma client
+        run: npm run db:generate
+
       - name: Type check
         run: npx tsc --noEmit
 
