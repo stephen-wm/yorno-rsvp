@@ -8,9 +8,9 @@
   },
   "editor.insertSpaces": true,
   "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 100,
+  "editor.wordWrapColumn": 80,
   "editor.rulers": [
-    100
+    80
   ],
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
@@ -54,6 +54,9 @@
   },
   "[markdown]": {
     "editor.rulers": []
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
   },
   "search.followSymlinks": false,
   "search.exclude": {

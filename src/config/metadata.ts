@@ -76,7 +76,8 @@ export const baseMetadata: Metadata = {
 		locale: 'en_US',
 		url: 'https://yorno.rsvp',
 		title: 'Yorno — Invite everyone, tracking everything',
-		description: 'Create events, share invite links, and manage reservations with ease.',
+		description:
+			'Create events, share invite links, and manage reservations with ease.',
 		images: [
 			{
 				url: '/og-image.png',
@@ -91,7 +92,8 @@ export const baseMetadata: Metadata = {
 		card: 'summary_large_image',
 		creator: '@yorno',
 		title: 'Yorno — Invite everyone, tracking everything.',
-		description: 'Create events, share invite links, and manage reservations with ease.',
+		description:
+			'Create events, share invite links, and manage reservations with ease.',
 		images: ['/og-image.png'],
 	},
 };

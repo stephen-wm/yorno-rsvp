@@ -29,7 +29,9 @@
 		".husky",
 		".vscode",
 		".github/workflows",
-		".env*"
+		".env*",
+		"src/generated/prisma/**",
+		"prisma/migrations/**"
 	],
 	"dictionaryDefinitions": [
 		{

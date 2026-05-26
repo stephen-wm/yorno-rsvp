@@ -23,24 +23,27 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: "20"
-
-      - name: Install dependencies
-        run: npm install
+          cache: "npm"
 
       - name: Set secrets
         run: |
           if [ "${GITHUB_ACTOR}" = "dependabot[bot]" ]; then
             echo "DATABASE_URL=postgres://fake_user:fake_pass@localhost:5432/fakedb?pgbouncer=false" >> $GITHUB_ENV
+            echo "DIRECT_URL=postgres://fake_user:fake_pass@localhost:5432/fakedb?pgbouncer-false" >> $GITHUB_ENV
             echo "BETTER_AUTH_SECRET=fake_better_auth_secret" >> $GITHUB_ENV
             echo "RESEND_API_KEY=fake_api_key" >> $GITHUB_ENV
           else
             echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> $GITHUB_ENV
+            echo "DIRECT_URL=${{ secrets.DIRECT_URL }}" >> $GITHUB_ENV
             echo "BETTER_AUTH_SECRET=${{ secrets.BETTER_AUTH_SECRET }}" >> $GITHUB_ENV
             echo "RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" >> $GITHUB_ENV
           fi
 
-      - name: Build project
-        run: npm run build
+      - name: Install dependencies
+        run: npm install
 
       - name: Lint code
         run: npm run lint
+
+      - name: Build project
+        run: npm run build

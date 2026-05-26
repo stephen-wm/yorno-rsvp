@@ -16,11 +16,13 @@ export default function Loading() {
 					<div className="absolute inset-0 rounded-full border-2 border-muted" />
 					{/* Spinning arc */}
 					<div
-						className="absolute inset-0 animate-spin rounded-full border-2 border-transparent
-							border-t-primary"
+						className="absolute inset-0 animate-spin rounded-full border-2
+							border-transparent border-t-primary"
 					/>
 				</div>
-				<p className="animate-pulse text-sm text-muted-foreground">Loading...</p>
+				<p className="animate-pulse text-sm text-muted-foreground">
+					Loading...
+				</p>
 			</div>
 		</div>
 	);

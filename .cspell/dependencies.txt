@@ -18,3 +18,4 @@ sonner
 shadcn
 magicui
 bento
+neonctl

@@ -9,12 +9,19 @@ import {
 // excluded from the public API of this wrapper
 type ThemeProviderProps = Omit<
 	NextThemeProviderProps,
-	'attribute' | 'defaultTheme' | 'disableTransitionOnChange' | 'enableColorScheme' | 'enableSystem'
+	| 'attribute'
+	| 'defaultTheme'
+	| 'disableTransitionOnChange'
+	| 'enableColorScheme'
+	| 'enableSystem'
 >;
 
 /* —— MARK: THEME PROVIDER —————————————————————————————————————————————————————————————————————— */
 
-export function ThemeProvider({ children, ...props }: Readonly<ThemeProviderProps>) {
+export function ThemeProvider({
+	children,
+	...props
+}: Readonly<ThemeProviderProps>) {
 	return (
 		<NextThemeProvider
 			attribute="class"

@@ -21,3 +21,6 @@ Partiful
 Tomás
 Qwik
 Auser
+healthz
+pooler
+Postg
