@@ -25,9 +25,6 @@ jobs:
           node-version: "20"
           cache: "npm"
 
-      - name: Install dependencies
-        run: npm install
-
       - name: Set secrets
         run: |
           if [ "${GITHUB_ACTOR}" = "dependabot[bot]" ]; then
@@ -41,6 +38,9 @@ jobs:
             echo "BETTER_AUTH_SECRET=${{ secrets.BETTER_AUTH_SECRET }}" >> $GITHUB_ENV
             echo "RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" >> $GITHUB_ENV
           fi
+
+      - name: Install dependencies
+        run: npm install
 
       - name: Lint code
         run: npm run lint
