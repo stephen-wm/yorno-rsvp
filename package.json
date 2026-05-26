@@ -1,6 +1,6 @@
 {
 	"name": "yorno-rsvp",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"private": true,
 	"description": "Modern event management and RSVP platform for creating, sharing, and reserving events.",
 	"author": {
@@ -26,6 +26,7 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
+    "vercel-build": "prisma generate && prisma migrate deploy && next build",
 		"db:generate": "prisma generate",
 		"db:migrate": "prisma migrate dev",
 		"db:deploy": "prisma migrate deploy",
