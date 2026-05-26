@@ -8,6 +8,10 @@ on: [push, pull_request]
 jobs:
   commitlint:
     runs-on: ubuntu-22.04
+
+    env:
+      PRISMA_SKIP_POSTINSTALL_GENERATE: true
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
