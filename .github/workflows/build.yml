@@ -42,9 +42,6 @@ jobs:
             echo "RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" >> $GITHUB_ENV
           fi
 
-      - name: Generate Prisma client
-        run: npm run db:generate
-
       - name: Lint code
         run: npm run lint
 
