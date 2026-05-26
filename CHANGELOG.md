@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-05-26
+
+### Added
+
+- `vercel-builds` script in `package.json` to ensure Vercel production deployments generate Prisma client and deploy migrations
+
 ## [0.2.0] - 2026-05-26
 
 ### Added
@@ -89,7 +95,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Initial project setup using Next.js (App Router) with TypeScript
 
-[Unreleased]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.1.2...v0.2.0
 [0.1.3]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.1.1...v0.1.2
