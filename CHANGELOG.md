@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+## [0.2.6] - 2026-05-27
+
 ### Changed
 
 - Updated the `User Persona` field in the `user_story.yml` GitHub Issue Form from a single-select dropdown to multi-select checkboxes to allow stories to target multiple user types.
@@ -126,7 +128,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Initial project setup using Next.js (App Router) with TypeScript
 
-[Unreleased]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.4...HEAD
+[Unreleased]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.6...HEAD
 [0.2.4]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.3...v0.2.4
 [0.2.3]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.2...v0.2.3
 [0.2.2]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.1...v0.2.2
@@ -136,3 +138,4 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 [0.1.2]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/stephen-wm/yorno-rsvp/releases/tag/v0.1.0
+[0.2.6]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.4...v0.2.6
