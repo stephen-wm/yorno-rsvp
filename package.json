@@ -82,12 +82,12 @@
 		"@tailwindcss/postcss": "^4",
 		"@tailwindcss/typography": "^0.5.19",
 		"@trivago/prettier-plugin-sort-imports": "^6.0.2",
-		"@types/node": "^20",
+		"@types/node": "^25",
 		"@types/pg": "8.20.0",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
-		"cspell": "^9.8.0",
-		"eslint": "^9",
+		"cspell": "^10.0.0",
+		"eslint": "^10",
 		"eslint-config-next": "16.2.6",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-import-resolver-typescript": "^4.4.4",
@@ -105,7 +105,7 @@
 		"eslint-plugin-unicorn": "^64.0.0",
 		"eslint-plugin-unused-imports": "^4.4.1",
 		"husky": "^9.1.7",
-		"lint-staged": "^16.4.0",
+		"lint-staged": "^17.0.5",
 		"open-cli": "^9.0.0",
 		"plop": "^4.0.5",
 		"prettier": "^3.8.3",
@@ -114,9 +114,9 @@
 		"prettier-plugin-merge": "^0.10.1",
 		"prettier-plugin-tailwindcss": "^0.8.0",
 		"prisma": "7.8.0",
-		"release-it": "19.2.4",
+		"release-it": "20.0.1",
 		"tailwindcss": "^4",
 		"tsx": "^4.22.3",
-		"typescript": "^5"
+		"typescript": "^6"
 	}
 }
