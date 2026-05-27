@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+## [0.2.4] - 2026-05-27
+
+### Refactor
+
+- Prisma client generation step in `ci` workflow for both dependabot and non-dependabot triggers
+- Add fallback dummy values for needed environment variables in `ci` workflow
+
 ## [0.2.3] - 2026-05-27
 
 ### Changed
@@ -107,7 +114,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Initial project setup using Next.js (App Router) with TypeScript
 
-[Unreleased]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.3...HEAD
+[Unreleased]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.4...HEAD
+[0.2.4]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.3...v0.2.4
 [0.2.3]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.2...v0.2.3
 [0.2.2]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.1...v0.2.2
 [0.2.1]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.0...v0.2.1
