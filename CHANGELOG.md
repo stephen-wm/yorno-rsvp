@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+## [0.2.2] - 2026-05-26
+
+### Changed
+
+- Build command configuration in `vercel.json`
+
 ## [0.2.1] - 2026-05-26
 
 ### Added
