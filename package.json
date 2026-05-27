@@ -1,6 +1,6 @@
 {
 	"name": "yorno-rsvp",
-	"version": "0.2.2",
+	"version": "0.2.3",
 	"private": true,
 	"description": "Modern event management and RSVP platform for creating, sharing, and reserving events.",
 	"author": {
