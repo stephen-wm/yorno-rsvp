@@ -58,10 +58,8 @@ body:
         - label: Unauthenticated User (public event page visitors)
         - label: All Users
         - label: Other (describe in context)
-    validations:
-      required: true
 
-  - type: checkbox
+  - type: checkboxes
     id: area
     attributes:
       label: Affected Area
@@ -91,8 +89,6 @@ body:
         - label: API
         - label: Users & Roles (RBAC)
         - label: Other
-    validations:
-      required: true
 
   - type: dropdown
     id: priority
