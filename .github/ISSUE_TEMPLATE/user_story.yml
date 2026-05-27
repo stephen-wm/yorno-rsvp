@@ -43,54 +43,54 @@ body:
     validations:
       required: true
 
-  - type: dropdown
+  - type: checkboxes
     id: user_persona
     attributes:
       label: User Persona
-      description: Which type of user does this story primarily benefit?
+      description: Which type(s) of user does this story primarily benefit?
       options:
-        - "Event Host (creating and managing their own events)"
-        - "Co-Host / Organizer (helping manage someone else's event)"
-        - "Event Staff (handling check-ins and day-of operations)"
-        - "Invited Guest (receiving invitations and RSVPing)"
-        - "Waitlisted Guest (on the waitlist for a full event)"
-        - "Guest with Plus-Ones (managing companions)"
-        - "Unauthenticated User (pubic event page visitors)"
-        - "All Users"
-        - "Other (describe in context)"
+        - label: Event Host (creating and managing their own events)
+        - label: Co-Host / Organizer (helping manage someone else's event)
+        - label: Event Staff (handling check-ins and day-of operations)
+        - label: Invited Guest (receiving invitations and RSVPing)
+        - label: Waitlisted Guest (on the waitlist for a full event)
+        - label: Guest with Plus-Ones (managing companions)
+        - label: Unauthenticated User (public event page visitors)
+        - label: All Users
+        - label: Other (describe in context)
     validations:
       required: true
 
-  - type: dropdown
+  - type: checkbox
     id: area
     attributes:
       label: Affected Area
-      description: Which part of Yorno does this story touch?
+      description: Which part(s) of Yorno does this story touch?
       options:
-        - Event Creation & Editing
-        - Event Publishing & Visibility
-        - Invitation Management (sending, tracking)
-        - RSVP Flow ( Yes / No / Maybe / Waitlist)
-        - Guest & Plus-One Management
-        - Check-In & Day-of Operations
-        - Event Roles (Host, Co-Host, Organizer, Staff)
-        - Announcements & Guest Communication
-        - Tags & Categorization
-        - Event Dashboard & Analytics
-        - Public Event Pages
-        - Onboarding
-        - Email Notifications
-        - Application Notifications
-        - Activity Feed
-        - Analytics
-        - File Attachments
-        - Billing & Subscriptions
-        - Account & Profile
-        - Authentication (login, registration, password reset)
-        - Navigation & Layout
-        - API
-        - Users & Roles (RBAC)
-        - Other
+        - label: Event Creation & Editing
+        - label: Event Publishing & Visibility
+        - label: Invitation Management (sending, tracking)
+        - label: RSVP Flow ( Yes / No / Maybe / Waitlist)
+        - label: Guest & Plus-One Management
+        - label: Check-In & Day-of Operations
+        - label: Event Roles (Host, Co-Host, Organizer, Staff)
+        - label: Announcements & Guest Communication
+        - label: Tags & Categorization
+        - label: Event Dashboard & Analytics
+        - label: Public Event Pages
+        - label: Onboarding
+        - label: Email Notifications
+        - label: Application Notifications
+        - label: Activity Feed
+        - label: Analytics
+        - label: File Attachments
+        - label: Billing & Subscriptions
+        - label: Account & Profile
+        - label: Authentication (login, registration, password reset)
+        - label: Navigation & Layout
+        - label: API
+        - label: Users & Roles (RBAC)
+        - label: Other
     validations:
       required: true
 
@@ -117,7 +117,7 @@ body:
         Provide additional context that helps the team understand the problem space.
 
         Include:
-        - What problem does this solve? What is thew user trying to accomplish?
+        - What problem does this solve? What is the user trying to accomplish?
         - What is the current user experience (if any)?
         - Are there any designs, mockups, or references to link to?
         - Edge cases or constraints to consider (e.g., "What happens when an event has 500 invitees?")

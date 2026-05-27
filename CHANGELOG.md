@@ -6,6 +6,18 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+### Changed
+
+- Updated the `User Persona` field in the `user_story.yml` GitHub Issue Form from a single-select dropdown to multi-select checkboxes to allow stories to target multiple user types.
+- Updated the `Affected Area` field in the `user_story.yml` GitHub Issue Form from a single-select dropdown to multi-select checkboxes so stories can span multiple product domains.
+
+### Fixed
+
+- Corrected typo in `User Persona` option:
+  - `pubic event page visitors` → `public event page visitors`
+- Corrected typo in `Detailed Description` help text:
+  - `thew user` → `the user`
+
 ## [0.2.4] - 2026-05-27
 
 ### Refactor
