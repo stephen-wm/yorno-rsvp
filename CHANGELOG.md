@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+## [0.2.9] - 2026-05-27
+
+### Changed
+
+- Update checkboxes configuration in the `User Persona` and `Affected Area` sections in `user_story.yml` template to textareas
+
 ## [0.2.8] - 2026-05-27
 
 ### Fixed
@@ -143,7 +149,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Initial project setup using Next.js (App Router) with TypeScript
 
-[Unreleased]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.8...HEAD
+[Unreleased]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.9...HEAD
+[0.2.9]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.8...v0.2.9
 [0.2.8]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.7...v0.2.8
 [0.2.7]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.6...v0.2.7
 [0.2.6]: https://github.com/stephen-wm/yorno-rsvp/compare/v0.2.4...v0.2.6

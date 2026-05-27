@@ -43,52 +43,32 @@ body:
     validations:
       required: true
 
-  - type: checkboxes
+  - type: textarea
     id: user_persona
     attributes:
       label: User Persona
       description: Which type(s) of user does this story primarily benefit?
-      options:
-        - label: Event Host (creating and managing their own events)
-        - label: Co-Host / Organizer (helping manage someone else's event)
-        - label: Event Staff (handling check-ins and day-of operations)
-        - label: Invited Guest (receiving invitations and RSVPing)
-        - label: Waitlisted Guest (on the waitlist for a full event)
-        - label: Guest with Plus-Ones (managing companions)
-        - label: Unauthenticated User (public event page visitors)
-        - label: All Users
-        - label: Other (describe in context)
+      placeholder: |
+        Options: Event Host, Co-Host / Organizer, Event Staff, Invited Guest,
+        Waitlisted Guest, Guest with Plus-Ones, Unauthenticated User, All Users
+    validations:
+      required: true
 
-  - type: checkboxes
+  - type: textarea
     id: area
     attributes:
       label: Affected Area
       description: Which part(s) of Yorno does this story touch?
-      options:
-        - label: Event Creation & Editing
-        - label: Event Publishing & Visibility
-        - label: Invitation Management (sending, tracking)
-        - label: RSVP Flow ( Yes / No / Maybe / Waitlist)
-        - label: Guest & Plus-One Management
-        - label: Check-In & Day-of Operations
-        - label: Event Roles (Host, Co-Host, Organizer, Staff)
-        - label: Announcements & Guest Communication
-        - label: Tags & Categorization
-        - label: Event Dashboard & Analytics
-        - label: Public Event Pages
-        - label: Onboarding
-        - label: Email Notifications
-        - label: Application Notifications
-        - label: Activity Feed
-        - label: Analytics
-        - label: File Attachments
-        - label: Billing & Subscriptions
-        - label: Account & Profile
-        - label: Authentication (login, registration, password reset)
-        - label: Navigation & Layout
-        - label: API
-        - label: Users & Roles (RBAC)
-        - label: Other
+      placeholder: |
+        Options: Event Creation & Editing, Event Publishing & Visibility,
+        Invitation Management, RSVP Flow, Guest & Plus-One Management,
+        Check-In & Day-of Operations, Event Roles, Announcements & Guest Communication,
+        Tags & Categorization, Event Dashboard & Analytics, Public Event Pages,
+        Onboarding, Email Notifications, Application Notifications, Activity Feed,
+        Analytics, File Attachments, Billing & Subscriptions, Account & Profile,
+        Authentication, Navigation & Layout, API, Users & Roles (RBAC), Other
+    validations:
+      required: true
 
   - type: dropdown
     id: priority
