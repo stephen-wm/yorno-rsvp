@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+### Changed
+
+- Bumped `eslint-plugin-react-you-might-not-need-an-effect` version from v0.10.1 to v0.10.2
+  - [Release notes](https://github.com/nickjvandyke/eslint-plugin-react-you-might-not-need-an-effect/releases)
+- Bumped `posthog-js` version from v1.376.0 to v1.376.3
+  - [Release notes](https://github.com/PostHog/posthog-js/releases)
+
 ## [0.2.6] - 2026-05-27
 
 ### Changed
